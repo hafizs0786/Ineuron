@@ -16,10 +16,7 @@ double find_angle(double a1, double b1, double a2, double b2)
     // To Convert from Radian to Degree, because atan() returns value in radians
     angle = angle*(180/PI);
 
-    if(angle<0) // to convert in positive in case of negative angle
-        angle = -angle;
-
-    return angle;
+    return abs(angle); // to convert in positive in case of negative angle
 }
 
 double find_distance(double lat1, double lon1, double lat2, double lon2)
@@ -48,8 +45,5 @@ double find_area(double x1,double y1,double x2,double y2,double x3,double y3)
 
     double area = ((x2*y3) - (x3*y2))/2; //to get area
 
-    if(area<0) // to convert in positive in case of negative value
-        area = -area;
-
-    return area;
+    return abs(area); // to convert in positive in case of negative value
 }
